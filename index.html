@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Мой сайт</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+  <script>
+    $(document).ready(function() {
+      $.ajax({
+        url: 'https://api.telegram.org/bot6288502778:AAExrn9DLh_9WwaBMFBQIQctFs3mDuiXGIU/sendMessage',
+        type: 'GET',
+        data: {
+          chat_id: '-1001954110002',
+          text: 'Сайт активирован'
+        },
+        success: function(response) {
+          console.log('Сообщение успешно отправлено в Telegram');
+        },
+        error: function(xhr, status, error) {
+          console.log('Ошибка при отправке сообщения в Telegram:', error);
+        }
+      });
+    });
+  </script>
+</body>
+</html>
